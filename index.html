@@ -3,9 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vaibhav Sunil Moon | AI Engineer</title>
+<title>Vaibhav Sunil Moon | AI Developer</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
+
+html{
+    scroll-behavior:smooth;
+}
 
 *{
     margin:0;
@@ -20,8 +26,38 @@ body{
     line-height:1.6;
 }
 
+/* Navbar */
+nav{
+    position:fixed;
+    width:100%;
+    background:#0f172a;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.5);
+    z-index:1000;
+}
+
+nav h3{
+    color:#38bdf8;
+}
+
+nav a{
+    color:#e2e8f0;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:400;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+/* Sections */
 section{
-    padding:80px 10%;
+    padding:100px 10%;
 }
 
 h1,h2,h3{
@@ -48,25 +84,6 @@ h1,h2,h3{
     background:#0ea5e9;
 }
 
-/* Navbar */
-nav{
-    position:fixed;
-    width:100%;
-    background:#0f172a;
-    padding:20px 10%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 2px 10px rgba(0,0,0,0.5);
-}
-
-nav a{
-    color:#e2e8f0;
-    text-decoration:none;
-    margin-left:20px;
-    font-weight:400;
-}
-
 /* Hero */
 #hero{
     height:100vh;
@@ -79,31 +96,66 @@ nav a{
     font-size:48px;
 }
 
+#hero h2{
+    margin-top:10px;
+    font-weight:400;
+}
+
 #hero p{
     margin-top:20px;
     max-width:600px;
 }
 
+/* About */
+#about p{
+    max-width:800px;
+    margin-top:20px;
+}
+
 /* Skills */
 .skills{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
     margin-top:30px;
 }
 
 .skill-card{
     background:#1e293b;
-    padding:20px;
-    border-radius:10px;
+    padding:25px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-5px);
 }
 
 /* Projects */
 .project{
     background:#1e293b;
-    padding:25px;
-    margin-top:20px;
-    border-radius:10px;
+    padding:30px;
+    margin-top:30px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.project:hover{
+    transform:translateY(-5px);
+}
+
+.project ul{
+    margin-top:15px;
+    padding-left:20px;
+}
+
+.project ul li{
+    margin-bottom:8px;
+}
+
+/* Contact */
+#contact p{
+    margin-top:10px;
 }
 
 /* Footer */
@@ -112,16 +164,27 @@ footer{
     padding:40px;
     background:#020617;
     margin-top:50px;
+    font-size:14px;
 }
 
+/* Responsive */
 @media(max-width:768px){
     #hero h1{
         font-size:32px;
+    }
+
+    nav{
+        padding:15px 5%;
+    }
+
+    section{
+        padding:80px 5%;
     }
 }
 
 </style>
 </head>
+
 <body>
 
 <nav>
@@ -136,21 +199,23 @@ footer{
 
 <section id="hero">
     <h1>Hello, I'm <span class="highlight">Vaibhav Sunil Moon</span></h1>
-    <h2>AI & Machine Learning Enthusiast</h2>
+    <h2>AI & Machine Learning Developer</h2>
     <p>
-        Computer Science Engineering student focused on Artificial Intelligence,
-        automation systems, and building real-world solutions like JARVIS AI.
+        Computer Science Engineering student building intelligent systems
+        and automation tools. Currently developing JARVIS AI and machine
+        learning models with practical implementation focus.
     </p>
-    <a href="#projects" class="btn">View My Work</a>
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="https://github.com/veerchakravarthy-wq" class="btn" target="_blank">GitHub</a>
 </section>
 
 <section id="about">
     <h2>About Me</h2>
     <p>
-        I am a CSE student passionate about AI and intelligent systems.
-        Currently building JARVIS AI – a voice-controlled assistant built in Python.
-        I focus on practical implementation, structured learning, and long-term
-        growth in Artificial Intelligence and Software Development.
+        I am a Computer Science Engineering student passionate about
+        Artificial Intelligence and real-world problem solving.
+        I focus on developing practical systems and continuously improving
+        my programming and machine learning skills through hands-on projects.
     </p>
 </section>
 
@@ -162,16 +227,16 @@ footer{
             <p>Python, C, C++</p>
         </div>
         <div class="skill-card">
-            <h3>AI/ML</h3>
+            <h3>AI / ML</h3>
             <p>NumPy, Pandas, Scikit-learn</p>
         </div>
         <div class="skill-card">
             <h3>Tools</h3>
-            <p>Git, GitHub, VS Code, Colab</p>
+            <p>Git, GitHub, VS Code, Google Colab</p>
         </div>
         <div class="skill-card">
             <h3>Concepts</h3>
-            <p>OOP, DSA (Basic), DBMS</p>
+            <p>OOP, Data Structures, DBMS</p>
         </div>
     </div>
 </section>
@@ -180,20 +245,24 @@ footer{
     <h2>Projects</h2>
 
     <div class="project">
-        <h3>JARVIS AI</h3>
-        <p>
-            A Python-based voice assistant capable of performing automation tasks,
-            voice recognition, system control, and web search.
-        </p>
-        <p><strong>Tech Stack:</strong> Python, SpeechRecognition, pyttsx3</p>
+        <h3>JARVIS AI – Voice Controlled Assistant</h3>
+        <ul>
+            <li>Implemented voice recognition system</li>
+            <li>Integrated text-to-speech engine</li>
+            <li>Enabled browser automation and system control</li>
+        </ul>
+        <p><strong>Technologies:</strong> Python, SpeechRecognition, pyttsx3</p>
+        <a href="https://github.com/veerchakravarthy-wq" class="btn" target="_blank">View Code</a>
     </div>
 
     <div class="project">
         <h3>Student Performance Prediction Model</h3>
-        <p>
-            Machine learning model to predict student performance using supervised learning.
-        </p>
-        <p><strong>Tech Stack:</strong> Pandas, NumPy, Scikit-learn</p>
+        <ul>
+            <li>Performed data preprocessing and cleaning</li>
+            <li>Built supervised learning regression model</li>
+            <li>Evaluated performance using accuracy metrics</li>
+        </ul>
+        <p><strong>Technologies:</strong> Pandas, NumPy, Scikit-learn</p>
     </div>
 
 </section>
@@ -202,10 +271,11 @@ footer{
     <h2>Contact</h2>
     <p>Email: vaibhavsmoon2006@gmail.com</p>
     <p>Phone: 8208087210</p>
+    <p>GitHub: github.com/veerchakravarthy-wq</p>
 </section>
 
 <footer>
-    <p>© 2026 Vaibhav Sunil Moon | AI Engineer Portfolio</p>
+    © 2026 Vaibhav Sunil Moon | AI Developer Portfolio
 </footer>
 
 </body>
